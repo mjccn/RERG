@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f803fa9e-800f-4e24-b363-35105ac5ab3b" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file:///opt/anaconda3/envs/m1-cpu/lib/python3.8/site-packages/torch/_utils.py" root0="SKIP_INSPECTION" />
+    <setting file="file:///opt/anaconda3/envs/m1-cpu/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py" root0="SKIP_INSPECTION" />
+    <setting file="file:///opt/anaconda3/envs/m1-cpu/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py" root0="SKIP_INSPECTION" />
+    <setting file="file:///opt/anaconda3/envs/m1-cpu/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2Ept3me5Tb7FKs4xrPcCZdhOmL2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/majiachen/debug code/CRFB&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tools" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/bert_w2c" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <module name="CRFB" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <module name="CRFB" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="CRFB" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="CRFB-main" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <module name="CRFB" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="CRFB" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <module name="CRFB" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Sphinx task">
+      <module name="CRFB" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="CRFB" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="CRFB" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-PY-242.20224.428" />
+        <option value="bundled-python-sdk-80e8e15d2b92-39cff9de6eef-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.20224.428" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f803fa9e-800f-4e24-b363-35105ac5ab3b" name="Changes" comment="" />
+      <created>1663304158065</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663304158065</updated>
+      <workItem from="1663304160592" duration="735000" />
+      <workItem from="1663305195199" duration="1454000" />
+      <workItem from="1663306727168" duration="25000" />
+      <workItem from="1663306772920" duration="25000" />
+      <workItem from="1664010513348" duration="478000" />
+      <workItem from="1664624581508" duration="4696000" />
+      <workItem from="1664686929045" duration="2128000" />
+      <workItem from="1664693148759" duration="11754000" />
+      <workItem from="1664715684767" duration="109000" />
+      <workItem from="1664762099484" duration="5442000" />
+      <workItem from="1664772619279" duration="10703000" />
+      <workItem from="1664846657687" duration="9697000" />
+      <workItem from="1664931438010" duration="695000" />
+      <workItem from="1664938457293" duration="842000" />
+      <workItem from="1664964558909" duration="2484000" />
+      <workItem from="1665035279591" duration="1937000" />
+      <workItem from="1665108615264" duration="2031000" />
+      <workItem from="1665114411875" duration="598000" />
+      <workItem from="1665458942284" duration="886000" />
+      <workItem from="1665469924750" duration="15973000" />
+      <workItem from="1665490563770" duration="2880000" />
+      <workItem from="1665535219806" duration="11493000" />
+      <workItem from="1665631255055" duration="2025000" />
+      <workItem from="1665635879917" duration="447000" />
+      <workItem from="1665745036058" duration="55000" />
+      <workItem from="1665745111776" duration="640000" />
+      <workItem from="1665820341763" duration="196000" />
+      <workItem from="1665827649805" duration="1286000" />
+      <workItem from="1665918278806" duration="7000" />
+      <workItem from="1666331114635" duration="2120000" />
+      <workItem from="1666340304230" duration="1430000" />
+      <workItem from="1666574005922" duration="1576000" />
+      <workItem from="1666606458199" duration="481000" />
+      <workItem from="1666788440229" duration="714000" />
+      <workItem from="1666864993476" duration="5000" />
+      <workItem from="1666924403633" duration="5000" />
+      <workItem from="1667016823479" duration="4000" />
+      <workItem from="1667110178650" duration="5978000" />
+      <workItem from="1667135084316" duration="5962000" />
+      <workItem from="1667297521962" duration="4000" />
+      <workItem from="1667305131101" duration="839000" />
+      <workItem from="1667376252417" duration="26000" />
+      <workItem from="1667377088368" duration="31000" />
+      <workItem from="1668056411946" duration="8041000" />
+      <workItem from="1674110423553" duration="914000" />
+      <workItem from="1674283083465" duration="11000" />
+      <workItem from="1677822555912" duration="8297000" />
+      <workItem from="1678070736440" duration="597000" />
+      <workItem from="1678429610905" duration="7463000" />
+      <workItem from="1678444633089" duration="5550000" />
+      <workItem from="1678505951678" duration="675000" />
+      <workItem from="1678507758993" duration="8282000" />
+      <workItem from="1678531670561" duration="4665000" />
+      <workItem from="1678586990089" duration="141000" />
+      <workItem from="1678602912472" duration="4479000" />
+      <workItem from="1678702845548" duration="18870000" />
+      <workItem from="1678773476101" duration="53000" />
+      <workItem from="1678859438108" duration="3758000" />
+      <workItem from="1678867001136" duration="331000" />
+      <workItem from="1678926863757" duration="1288000" />
+      <workItem from="1679210224829" duration="6260000" />
+      <workItem from="1679278981107" duration="4664000" />
+      <workItem from="1679728428411" duration="6265000" />
+      <workItem from="1679825088580" duration="1568000" />
+      <workItem from="1679999120403" duration="7227000" />
+      <workItem from="1680055197993" duration="14000" />
+      <workItem from="1680055219308" duration="3859000" />
+      <workItem from="1680844737114" duration="2000" />
+      <workItem from="1680845516093" duration="1077000" />
+      <workItem from="1681025992644" duration="149000" />
+      <workItem from="1681026163808" duration="210000" />
+      <workItem from="1681026404492" duration="949000" />
+      <workItem from="1681279605762" duration="142000" />
+      <workItem from="1681474137044" duration="24000" />
+      <workItem from="1682666419171" duration="963000" />
+      <workItem from="1683096044008" duration="15000" />
+      <workItem from="1684134629937" duration="129000" />
+      <workItem from="1684134780302" duration="10000" />
+      <workItem from="1684294105966" duration="182000" />
+      <workItem from="1685357469245" duration="30000" />
+      <workItem from="1687060189421" duration="61000" />
+      <workItem from="1698047216969" duration="2071000" />
+      <workItem from="1698049357343" duration="3123000" />
+      <workItem from="1698061475444" duration="71000" />
+      <workItem from="1698061562979" duration="13000" />
+      <workItem from="1698061614671" duration="33000" />
+      <workItem from="1698061702605" duration="36000" />
+      <workItem from="1698061747932" duration="396000" />
+      <workItem from="1698062162487" duration="1910000" />
+      <workItem from="1698067880611" duration="620000" />
+      <workItem from="1698198699238" duration="56000" />
+      <workItem from="1698722370269" duration="827000" />
+      <workItem from="1698724576450" duration="177000" />
+      <workItem from="1698724776433" duration="128000" />
+      <workItem from="1698826218378" duration="297000" />
+      <workItem from="1698828242447" duration="616000" />
+      <workItem from="1698830849651" duration="2604000" />
+      <workItem from="1698889408295" duration="4128000" />
+      <workItem from="1698917715341" duration="608000" />
+      <workItem from="1698991525054" duration="314000" />
+      <workItem from="1710562655358" duration="29000" />
+      <workItem from="1710562687607" duration="96000" />
+      <workItem from="1721032926408" duration="7213000" />
+      <workItem from="1721095828154" duration="21477000" />
+      <workItem from="1721175423411" duration="163000" />
+      <workItem from="1721175596533" duration="10507000" />
+      <workItem from="1721355381034" duration="154000" />
+      <workItem from="1721355683061" duration="521000" />
+      <workItem from="1722494948179" duration="337000" />
+      <workItem from="1722495316343" duration="44000" />
+      <workItem from="1722495373577" duration="462000" />
+      <workItem from="1724655986364" duration="300000" />
+      <workItem from="1724656291680" duration="36000" />
+      <workItem from="1724656333050" duration="346000" />
+      <workItem from="1724656694683" duration="77000" />
+      <workItem from="1724656813182" duration="378000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GACL_main$main.coverage" NAME="main Coverage Results" MODIFIED="1666606796019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/crmf$main.coverage" NAME="main Coverage Results" MODIFIED="1687060208361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CRFB$main.coverage" NAME="main Coverage Results" MODIFIED="1698063743432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/CRFB_main$main.coverage" NAME="main Coverage Results" MODIFIED="1721355870609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/pfnc$main_pheme.coverage" NAME="main_pheme Coverage Results" MODIFIED="1678867238933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pfnc$main.coverage" NAME="main Coverage Results" MODIFIED="1678862203385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/test$main.coverage" NAME="main Coverage Results" MODIFIED="1680845660213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pfnc$main_pheme_nohard.coverage" NAME="main_pheme Coverage Results" MODIFIED="1678766357473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
