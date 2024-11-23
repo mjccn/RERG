@@ -2,15 +2,17 @@ import os
 import sys
 
 sys.path.append(os.getcwd())
-from process import *
-from earlystopping import EarlyStopping
+from Process.process import *
+from others.earlystopping import EarlyStopping
 from torch_geometric.data import DataLoader
 from tqdm import tqdm
-from rand5fold import *
-from evaluate import *
+from Process.rand5fold import *
+from others.evaluate import *
 import random
 from model import *
 import numpy as np
+import time
+
 
 
 def setup_seed(seed):
@@ -21,10 +23,29 @@ def setup_seed(seed):
     th.backends.cudnn.deterministic = True
 
 
+# def validate(model, test_loader):
+#     model.eval()
+#     correct = 0
+#     total = 0
+#     with th.no_grad():
+#         for Batch_data in test_loader:
+#             Batch_data.to(device)
+#             _, _, y_test = model(Batch_data)
+#             labels = th.cat((Batch_data.y1, Batch_data.y2), 0)
+#             _, predicted = th.max(y_test.data, 1)
+#             total += labels.size(0)
+#             correct += (predicted == labels).sum().item()
+#     accuracy = 100 * correct / total
+#     return accuracy
+
 def validate(model, test_loader):
     model.eval()
     correct = 0
     total = 0
+    start_time = time.time()
+    interval = 5 * 60  # 5 minutes in seconds
+    accuracies = []
+
     with th.no_grad():
         for Batch_data in test_loader:
             Batch_data.to(device)
@@ -33,8 +54,15 @@ def validate(model, test_loader):
             _, predicted = th.max(y_test.data, 1)
             total += labels.size(0)
             correct += (predicted == labels).sum().item()
+
+            # Check if 5 minutes have passed
+            if time.time() - start_time >= interval:
+                accuracy = 100 * correct / total
+                accuracies.append(accuracy)
+                start_time = time.time()  # Reset the timer
+
     accuracy = 100 * correct / total
-    return accuracy
+    return accuracy, accuracies
 
 
 def semi_grad_function(z1, z2, neg_matrix, ex_r):
@@ -61,8 +89,7 @@ def get_sim(model, x, edge_index, batch):
 setup_seed(2022)
 
 
-def train_rerg(x_test, x_train, lr, weight_decay, patience, n_epochs, batchsize, dataname):
-
+def train_rerg_twitter(x_test, x_train, lr, weight_decay, patience, n_epochs, batchsize, dataname):
     model = RERG(768, 64, 64).to(device)
     optimizer = th.optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=lr, weight_decay=weight_decay)
     model.train()
@@ -72,15 +99,12 @@ def train_rerg(x_test, x_train, lr, weight_decay, patience, n_epochs, batchsize,
     val_accs = []
     early_stopping = EarlyStopping(patience=patience, verbose=True)
     beta = 0.001
-    ignore_rate = 0.05
+    interval_accuracies = []
 
     for epoch in range(1, n_epochs + 1):
-
         traindata_list, testdata_list = loadData(dataname, x_train, x_test, droprate=0.4)
-
         train_loader = DataLoader(traindata_list, batch_size=batchsize, shuffle=True, num_workers=5, drop_last=False)
         test_loader = DataLoader(testdata_list, batch_size=batchsize, shuffle=True, num_workers=5, drop_last=False)
-
         tqdm_train_loader = tqdm(train_loader)
 
         avg_loss = []
@@ -109,12 +133,11 @@ def train_rerg(x_test, x_train, lr, weight_decay, patience, n_epochs, batchsize,
                     if sim.shape != ori_sim.shape:
                         sim = F.adaptive_avg_pool2d(sim.unsqueeze(0), ori_sim.shape).squeeze(0)
                     sim_grad = sim - ori_sim
-                    te = sim_grad.reshape(-1).sort()[0][int(sim_grad.size()[0] * sim_grad.size()[1] * ignore_rate)]
+                    te = sim_grad.reshape(-1).sort()[0][int(sim_grad.size()[0] * sim_grad.size()[1] * 0.05)]
                     neg_matrix = th.zeros_like(sim_grad).to(device)
                     neg_matrix[sim_grad >= te] = 1
                     ex_r = sim.mean() / ((sim * neg_matrix).mean())
                     ori_sim = sim
-
             loss_contrastive = loss_contrastive.to(device)
             final_loss = loss_cross + beta * loss_contrastive
             avg_loss.append(final_loss.item())
@@ -134,7 +157,8 @@ def train_rerg(x_test, x_train, lr, weight_decay, patience, n_epochs, batchsize,
         train_losses.append(np.mean(avg_loss))
         train_accs.append(np.mean(avg_acc))
 
-        val_accuracy = validate(model, test_loader)
+        val_accuracy, interval_accs = validate(model, test_loader)
+        interval_accuracies.extend(interval_accs)
         if val_accuracy < 50:
             beta *= 1.1
         else:
@@ -191,7 +215,7 @@ def train_rerg(x_test, x_train, lr, weight_decay, patience, n_epochs, batchsize,
 
         if epoch > 25:
             early_stopping(np.mean(temp_val_losses), np.mean(temp_val_accs), np.mean(temp_val_F1), np.mean(temp_val_F2),
-                           np.mean(temp_val_F3), np.mean(temp_val_F4), model, 'RERG', dataname)
+                           np.mean(temp_val_F3), np.mean(temp_val_F4), model, 'GCLRE', dataname)
         accs = np.mean(temp_val_accs)
         F1 = np.mean(temp_val_F1)
         F2 = np.mean(temp_val_F2)
@@ -205,6 +229,8 @@ def train_rerg(x_test, x_train, lr, weight_decay, patience, n_epochs, batchsize,
             F3 = early_stopping.F3
             F4 = early_stopping.F4
             break
+
+    print("Interval Accuracies: ", interval_accuracies)
     return accs, F1, F2, F3, F4
 
 
@@ -239,15 +265,15 @@ if __name__ == '__main__':
     print('fold3 shape: ', len(fold3_x_test), len(fold3_x_train))
     print('fold4 shape: ', len(fold4_x_test), len(fold4_x_train))
 
-    accs0, F1_0, F2_0, F3_0, F4_0 = train_rerg(fold0_x_test, fold0_x_train, lr, weight_decay, patience, n_epochs,
+    accs0, F1_0, F2_0, F3_0, F4_0 = train_rerg_twitter(fold0_x_test, fold0_x_train, lr, weight_decay, patience, n_epochs,
                                                batchsize, datasetname)
-    accs1, F1_1, F2_1, F3_1, F4_1 = train_rerg(fold1_x_test, fold1_x_train, lr, weight_decay, patience, n_epochs,
+    accs1, F1_1, F2_1, F3_1, F4_1 = train_rerg_twitter(fold1_x_test, fold1_x_train, lr, weight_decay, patience, n_epochs,
                                                batchsize, datasetname)
-    accs2, F1_2, F2_2, F3_2, F4_2 = train_rerg(fold2_x_test, fold2_x_train, lr, weight_decay, patience, n_epochs,
+    accs2, F1_2, F2_2, F3_2, F4_2 = train_rerg_twitter(fold2_x_test, fold2_x_train, lr, weight_decay, patience, n_epochs,
                                                batchsize, datasetname)
-    accs3, F1_3, F2_3, F3_3, F4_3 = train_rerg(fold3_x_test, fold3_x_train, lr, weight_decay, patience, n_epochs,
+    accs3, F1_3, F2_3, F3_3, F4_3 = train_rerg_twitter(fold3_x_test, fold3_x_train, lr, weight_decay, patience, n_epochs,
                                                batchsize, datasetname)
-    accs4, F1_4, F2_4, F3_4, F4_4 = train_rerg(fold4_x_test, fold4_x_train, lr, weight_decay, patience, n_epochs,
+    accs4, F1_4, F2_4, F3_4, F4_4 = train_rerg_twitter(fold4_x_test, fold4_x_train, lr, weight_decay, patience, n_epochs,
                                                batchsize, datasetname)
     test_accs.append((accs0 + accs1 + accs2 + accs3 + accs4) / 5)
     NR_F1.append((F1_0 + F1_1 + F1_2 + F1_3 + F1_4) / 5)
